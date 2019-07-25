@@ -16,6 +16,10 @@
     display: block;
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -48,8 +52,13 @@
 
   &__radio {
     &-group {
-      widows: 50%;
+      width: 40%;
       display: inline-block;
+
+      @include respond(tab-port) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
 
       &:not(:last-child) {
         margin-right: 5rem;
